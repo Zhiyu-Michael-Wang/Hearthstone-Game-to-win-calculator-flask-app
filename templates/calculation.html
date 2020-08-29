@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}HS Calculator{% endblock %}
+{% block content %}
+<form action="#" method="POST">
+
+    <div class="input-group mb-3">
+        <input name="total_winning_needed" type="text" class="form-control" placeholder="Stars needed [1~150]" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">Stars</span>
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <input name="winning_star_bounce" type="text" class="form-control" placeholder="Star bounce [1~11]" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">Stars/Win</span>
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <input name="winning_rate" type="text" class="form-control" placeholder="Win rate [0~100]" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">%</span>
+        </div>
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Will go through Diamond5 to Legendary?</label>
+        </div>
+        <select name="five_to_one" class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose...</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+    <div style="text-align: right;">
+        <input class="btn btn-info" type="submit" value="Submit">
+    </div>
+    
+</form>
+{% endblock %}
+

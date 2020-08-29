@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+{% block content %}
+    <img src="{{ file_url }}" />
+{% endblock %}
+{% block footer %}
+    <!-- <a href="/" class="back_button">Back</a> -->
+    <div style="text-align: right;">
+        <a href="/" class="btn btn-info btn-lg" role="button" aria-pressed="true">Back</a>
+    </div>
+{% endblock %}

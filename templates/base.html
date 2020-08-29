@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    {% endblock %}
+    <style>
+        body {
+            background-color: rgb(247, 255, 255);
+            overflow-x: hidden;
+        }
+
+        .wrapper {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            
+            background-color: rgb(213, 255, 241);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .content {
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            margin-top: 30px;
+        }
+
+        header {
+            margin-bottom: 60px;
+        }
+
+        @media only screen and (min-width: 1023px) {
+            .wrapper {
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+        }
+
+        @media only screen and (max-width: 1022px) {
+            .wrapper {
+                margin-left: 2%;
+                margin-right: 2%;
+            }
+        }
+
+       
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Hearthstone Game-to-play Calculator</h1>
+            <p>--by Zhiyu Wang</p>
+        </header>
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer>
+            {% block footer %}
+            {% endblock %}
+        </footer>   
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
